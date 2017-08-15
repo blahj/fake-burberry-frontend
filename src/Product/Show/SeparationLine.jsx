@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-const Line = styled.hr`
+export default styled.hr`
   margin: 2rem -50vw 2rem -50vw;
   padding: 0;
   position: relative;
@@ -16,7 +15,3 @@ const Line = styled.hr`
     display: none;
   }
 `;
-
-export default () => (
-  <Line />
-);

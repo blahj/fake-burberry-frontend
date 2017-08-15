@@ -1,6 +1,7 @@
+/* eslint-disable react/style-prop-object */
 import React from 'react';
 import styled from 'styled-components';
-import { IntlProvider, FormattedNumber } from 'react-intl';
+import { FormattedNumber } from 'react-intl';
 
 const Section = styled.section`
   margin: 3rem 0 0 0;
@@ -143,9 +144,7 @@ export default () => (
               <Photo src={item.img} alt={item.name} />
               <Name>{item.name}</Name>
               <Price>
-                <IntlProvider locale="en">
-                  <FormattedNumber value={item.price} style="currency" currency="RUB" />
-                </IntlProvider>
+                <FormattedNumber value={item.price} style="currency" currency="RUB" />
               </Price>
             </Card>
           </div>

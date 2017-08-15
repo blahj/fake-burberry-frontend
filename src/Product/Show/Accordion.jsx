@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import SeparationLine from './SeparationLine';
 
@@ -114,5 +115,20 @@ class Accordion extends Component {
     );
   }
 }
+
+Accordion.propTypes = {
+  displayedMd: PropTypes.bool,
+  isOpened: PropTypes.bool,
+  name: PropTypes.string,
+  children: PropTypes.shape({}),
+};
+
+Accordion.defaultProps = {
+  displayedMd: false,
+  isOpened: false,
+  name: '',
+  children: '',
+};
+
 
 export default Accordion;

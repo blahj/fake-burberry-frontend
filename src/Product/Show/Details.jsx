@@ -1,6 +1,7 @@
+/* eslint-disable react/style-prop-object */
 import React from 'react';
 import styled from 'styled-components';
-import { IntlProvider, FormattedNumber } from 'react-intl';
+import { FormattedNumber } from 'react-intl';
 
 import SeparationLine from './SeparationLine';
 import Colors from './Colors';
@@ -103,9 +104,7 @@ export default () => (
     <Name>Long Cotton Gabardine Car Coat Coat Coat Coat Coat</Name>
     <Pricing>
       <Price>
-        <IntlProvider locale="en">
-          <FormattedNumber value={110000} style="currency" currency="RUB" />
-        </IntlProvider>
+        <FormattedNumber value={110000} style="currency" currency="RUB" />
       </Price>
       <Id>Item 39428531</Id>
     </Pricing>
