@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Footer = styled.footer`
   margin: 4rem 0 0 0;
@@ -49,7 +50,7 @@ const NavLink = styled.a`
 const FooterButtons = styled.div`
   margin: 1px 0 -1px 0; /* slightly tighten links to match zpl */
   padding: 0;
-
+  
   @media screen and (min-width: 48rem) {
     margin: 1rem 0 0 0;
     padding: 0;
@@ -66,6 +67,7 @@ const FooterButton = styled.button`
   background: transparent;
   color: #999;
   border: 0;
+  cursor: pointer;
 
   @media screen and (min-width: 48rem) {
     margin: 0;
@@ -108,6 +110,32 @@ const HelpersLink = styled.a`
   color: #171717;
 `;
 
+const FindStore = styled.div`
+  display: none;
+
+  @media screen and (min-width: 62rem) {
+    display: block;
+  }
+`;
+
+const Img = styled.img`
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+`;
+
+const StoreLink = styled(Link)`
+  margin-top: 1rem;
+  display: inline-block;
+  font-family: Raleway;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #171717;
+  text-decoration: none;
+  border-bottom: solid 1px #171717;
+`;
+
 export default () => (
   <Footer>
     <div className="container">
@@ -136,7 +164,7 @@ export default () => (
               <NavLink href="#contact">Site Map</NavLink>
             </nav>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-3">
             <NavTitle>legal &amp; cookies</NavTitle>
             <nav>
               <NavLink href="#contact">Terms &amp; Conditions</NavLink>
@@ -145,6 +173,12 @@ export default () => (
               <NavLink href="#contact">Accessibility Statement</NavLink>
               <NavLink href="#contact">Japan Only - SCTL indications</NavLink>
             </nav>
+          </div>
+          <div className="col-lg-3">
+            <FindStore>
+              <Img src="/pictures/store-photo.jpg" alt="our store" />
+              <StoreLink to="/">Find a store</StoreLink>
+            </FindStore>
           </div>
         </div>
       </FooterMenu>

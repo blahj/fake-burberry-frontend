@@ -1,6 +1,7 @@
 /* eslint-disable react/style-prop-object */
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { FormattedNumber } from 'react-intl';
 
 const Section = styled.section`
@@ -54,7 +55,7 @@ const Cards = styled.div`
   }
 `;
 
-const Card = styled.a`
+const Card = styled(Link)`
   margin: 0 0 2rem 0;
   padding: 0;
   display: flex;
@@ -107,28 +108,28 @@ const suggestions = [
     id: 1,
     name: 'Emroided Hooded',
     price: 27000,
-    href: '/emroided-hooded',
+    href: '/mens-clothing/emroided-hooded',
     img: '/pictures/suggest-photo-1.jpg',
   },
   {
     id: 2,
     name: 'Relaxed Fit Stretch Jeans',
     price: 22500,
-    href: '/relaxed-fit-stretch-jeans',
+    href: '/mens-clothing/relaxed-fit-stretch-jeans',
     img: '/pictures/suggest-photo-2.jpg',
   },
   {
     id: 3,
     name: 'Leather and House',
     price: 120000,
-    href: '/leather-and-house',
+    href: '/mens-clothing/leather-and-house',
     img: '/pictures/suggest-photo-3.jpg',
   },
   {
     id: 4,
     name: 'Leather Wingtip',
     price: 46000,
-    href: '/leather-wingtip',
+    href: '/mens-clothing/leather-wingtip',
     img: '/pictures/suggest-photo-4.jpg',
   },
 ];
@@ -140,7 +141,7 @@ export default () => (
       <div className="row">
         {suggestions.map(item => (
           <div className="col-xs-6 col-md-3" key={item.id}>
-            <Card href={item.href}>
+            <Card to={item.href}>
               <Photo src={item.img} alt={item.name} />
               <Name>{item.name}</Name>
               <Price>

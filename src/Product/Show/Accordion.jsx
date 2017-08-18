@@ -120,14 +120,14 @@ Accordion.propTypes = {
   displayedMd: PropTypes.bool,
   isOpened: PropTypes.bool,
   name: PropTypes.string,
-  children: PropTypes.shape({}),
+  children: PropTypes.node,
 };
 
 Accordion.defaultProps = {
   displayedMd: false,
   isOpened: false,
   name: '',
-  children: '',
+  children: [''],
 };
 
 
