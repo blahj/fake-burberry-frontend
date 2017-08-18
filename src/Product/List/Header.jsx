@@ -31,6 +31,13 @@ const Description = styled.p`
   opacity: .87;
 `;
 
+const Link = styled.a`
+  font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: ${props => (props.bold ? '600' : '400')};
+  font-size: .75rem;
+  color: #171717;
+  border-bottom: solid 1px #171717;
+`;
 
 export default () => (
   <Section>
@@ -39,9 +46,9 @@ export default () => (
       <div className="row">
         <div className="col-xs-12 col-md-9 col-lg-7">
           <Description>Explore our menswear collection for the season.
-           Sculptural knitwear, sweatshirts, artist overalls and
+           Sculptural knitwear, <Link>sweatshirts</Link>, artist overalls and
            oversized cabans feature alongside our signature trench coat
-           in both heritage
+           in both heritage and seasonal <Link to="/" bold>More</Link>
           </Description>
         </div>
       </div>
